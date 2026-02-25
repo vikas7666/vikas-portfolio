@@ -17,48 +17,50 @@ export default function Contact() {
   return (
     <section id="contact" ref={sectionRef} style={{ position: 'relative', zIndex: 2, background: '#080c10' }}>
       <div className="max-w-6xl mx-auto px-14 py-32 text-center">
-        <div className="reveal flex items-center justify-center gap-3 mb-5"
-          style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.15em', color: '#00e5c0', textTransform: 'uppercase' }}>
+        <div className="reveal flex items-center justify-center gap-3 mb-4"
+          style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.7rem', letterSpacing: '0.12em', color: '#00e5c0', textTransform: 'uppercase' }}>
           Contact
         </div>
         <h2 className="reveal mb-3"
-          style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-          Let's build something<br />great together
+          style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3.2rem)', letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+          Let's build something<br /><em style={{ fontStyle: 'italic', color: '#00e5c0' }}>great together</em>
         </h2>
 
         <a href="mailto:vikas.shukla966@gmail.com"
-          className="reveal block my-8 transition-all hover:opacity-70"
+          className="reveal block my-10 transition-all"
           style={{
-            fontFamily: 'Syne, sans-serif', fontWeight: 800,
-            fontSize: 'clamp(1.5rem, 4vw, 4rem)', letterSpacing: '-0.02em',
-            color: 'transparent', WebkitTextStroke: '1px rgba(255,255,255,0.2)',
+            fontFamily: 'Playfair Display, serif',
+            fontWeight: 700,
+            fontStyle: 'italic',
+            fontSize: 'clamp(1.4rem, 3.5vw, 3.5rem)',
+            letterSpacing: '-0.01em',
+            color: 'transparent',
+            WebkitTextStroke: '1px rgba(255,255,255,0.2)',
             textDecoration: 'none',
           }}
-          onMouseEnter={e => (e.currentTarget as HTMLElement).style.WebkitTextStroke = '1px #00e5c0'}
-          onMouseLeave={e => (e.currentTarget as HTMLElement).style.WebkitTextStroke = '1px rgba(255,255,255,0.2)'}>
+          onMouseEnter={e => (e.currentTarget as HTMLElement).style.webkitTextStroke = '1px #00e5c0'}
+          onMouseLeave={e => (e.currentTarget as HTMLElement).style.webkitTextStroke = '1px rgba(255,255,255,0.2)'}>
           vikas.shukla966@gmail.com
         </a>
 
-        <div className="reveal flex gap-5 justify-center flex-wrap mb-12">
+        <div className="reveal flex gap-5 justify-center flex-wrap mb-14">
           <a href="mailto:vikas.shukla966@gmail.com"
-            className="btn-clip inline-flex items-center gap-2 px-8 py-3 transition-all hover:-translate-y-0.5 hover:bg-white"
-            style={{ background: '#00e5c0', color: '#000', fontFamily: 'DM Mono, monospace', fontSize: '0.78rem', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
+            className="btn-clip inline-flex items-center gap-2 px-8 py-3.5 transition-all hover:-translate-y-0.5 hover:bg-white"
+            style={{ background: '#00e5c0', color: '#000', fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', textDecoration: 'none' }}>
             Send Me an Email
           </a>
           <a href="#"
-            className="inline-flex items-center gap-2 px-8 py-3 transition-all hover:-translate-y-0.5"
-            style={{ background: 'transparent', color: '#e8edf2', fontFamily: 'DM Mono, monospace', fontSize: '0.78rem', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.07)' }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#00e5c0'; (e.currentTarget as HTMLElement).style.color = '#00e5c0'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)'; (e.currentTarget as HTMLElement).style.color = '#e8edf2'; }}>
+            className="inline-flex items-center gap-2 px-8 py-3.5 transition-all hover:-translate-y-0.5 hover:border-[#00e5c0] hover:text-[#00e5c0]"
+            style={{ background: 'transparent', color: '#e8edf2', fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.12)' }}>
             Download Resume
           </a>
         </div>
 
-        <div className="reveal flex justify-center gap-8">
-          {[['⌬ GitHub', '#'], ['⌥ LinkedIn', '#'], ['◆ Twitter', '#']].map(([label, href]) => (
+        <div className="reveal flex justify-center gap-10">
+          {[['GitHub', '#'], ['LinkedIn', '#'], ['Twitter', '#']].map(([label, href]) => (
             <a key={label} href={href}
-              style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b7a8a', textDecoration: 'none' }}
-              className="hover:text-[#00e5c0] transition-colors flex items-center gap-2">
+              style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#6b7a8a', textDecoration: 'none' }}
+              className="hover:text-[#00e5c0] transition-colors">
               {label}
             </a>
           ))}

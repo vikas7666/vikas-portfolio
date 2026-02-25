@@ -24,45 +24,43 @@ export default function About() {
   return (
     <section id="about" ref={sectionRef} style={{ background: '#0e1318', position: 'relative', zIndex: 2 }}>
       <div className="max-w-6xl mx-auto px-14 py-32">
-        <div className="reveal flex items-center gap-3 mb-5"
-          style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.15em', color: '#00e5c0', textTransform: 'uppercase' }}>
+        <div className="reveal flex items-center gap-3 mb-4"
+          style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.7rem', letterSpacing: '0.12em', color: '#00e5c0', textTransform: 'uppercase' }}>
           About Me
           <span style={{ width: 60, height: 1, background: 'rgba(255,255,255,0.07)', display: 'inline-block' }} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          {/* Left */}
           <div className="reveal">
-            <h2 className="mb-8" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-              I build things<br />for the web.
+            <h2 className="mb-8" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.01em', lineHeight: 1.15 }}>
+              I build things<br /><em style={{ color: '#00e5c0', fontStyle: 'italic' }}>for the web.</em>
             </h2>
-            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#6b7a8a', marginBottom: 20 }}>
-              I'm <strong style={{ color: '#e8edf2', fontWeight: 500 }}>Vikas Shukla</strong>, a full-stack developer passionate about creating elegant, high-performance digital products. I specialize in the React and Node.js ecosystem, building everything from interactive frontends to robust backend APIs.
+            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.975rem', lineHeight: 1.8, color: '#6b7a8a', marginBottom: 20 }}>
+              I'm <strong style={{ color: '#e8edf2', fontWeight: 600 }}>Vikas Shukla</strong>, a full-stack developer passionate about creating elegant, high-performance digital products. I specialize in the React and Node.js ecosystem, building everything from interactive frontends to robust backend APIs.
             </p>
-            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#6b7a8a', marginBottom: 20 }}>
-              My approach combines <strong style={{ color: '#e8edf2', fontWeight: 500 }}>clean code</strong>, modern UI/UX sensibilities, and engineering best practices. I thrive in fast-paced environments where quality and speed both matter.
+            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.975rem', lineHeight: 1.8, color: '#6b7a8a', marginBottom: 20 }}>
+              My approach combines <strong style={{ color: '#e8edf2', fontWeight: 600 }}>clean code</strong>, modern UI/UX sensibilities, and engineering best practices. I thrive in fast-paced environments where quality and speed both matter.
             </p>
-            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#6b7a8a', marginBottom: 36 }}>
+            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.975rem', lineHeight: 1.8, color: '#6b7a8a', marginBottom: 36 }}>
               When I'm not shipping features, I'm exploring new technologies, contributing to open-source, or improving my craft.
             </p>
             <Link href="#contact"
-              className="btn-clip inline-flex items-center gap-2 px-8 py-3 transition-all hover:-translate-y-0.5 hover:bg-white"
-              style={{ background: '#00e5c0', color: '#000', fontFamily: 'DM Mono, monospace', fontSize: '0.78rem', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
+              className="btn-clip inline-flex items-center gap-2 px-8 py-3.5 transition-all hover:-translate-y-0.5 hover:bg-white"
+              style={{ background: '#00e5c0', color: '#000', fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', textDecoration: 'none' }}>
               Start a Project
             </Link>
           </div>
 
-          {/* Right */}
           <div className="reveal reveal-delay-1 flex flex-col gap-px" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.07)' }}>
             {highlights.map(h => (
               <div key={h.title} className="flex gap-4 items-start p-7 transition-colors"
                 style={{ background: '#111820' }}
                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = '#161e28'}
                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = '#111820'}>
-                <span style={{ color: '#00e5c0', fontSize: '1.2rem', marginTop: 2 }}>◈</span>
+                <span style={{ color: '#00e5c0', fontSize: '1rem', marginTop: 3 }}>◈</span>
                 <div>
-                  <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 600, fontSize: '0.95rem', marginBottom: 4 }}>{h.title}</div>
-                  <div style={{ fontSize: '0.84rem', color: '#6b7a8a', lineHeight: 1.5 }}>{h.desc}</div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: '0.95rem', marginBottom: 5, color: '#e8edf2' }}>{h.title}</div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.85rem', color: '#6b7a8a', lineHeight: 1.65 }}>{h.desc}</div>
                 </div>
               </div>
             ))}

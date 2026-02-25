@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,19 +12,23 @@
   --text: #e8edf2;
   --muted: #6b7a8a;
   --accent: #00e5c0;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
+  font-family: var(--font-body);
+  font-weight: 400;
   overflow-x: hidden;
   cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Noise texture */
@@ -53,19 +57,18 @@ body::after {
 
 .cursor-dot {
   position: fixed;
-  width: 10px; height: 10px;
+  width: 8px; height: 8px;
   border-radius: 50%;
   background: #00e5c0;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: screen;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s;
 }
 
 .cursor-ring {
   position: fixed;
-  width: 36px; height: 36px;
+  width: 32px; height: 32px;
   border-radius: 50%;
   border: 1px solid #00e5c0;
   pointer-events: none;
@@ -75,9 +78,7 @@ body::after {
   transition: transform 0.3s ease, border-color 0.2s;
 }
 
-.cursor-ring.hovered {
-  transform: translate(-50%, -50%) scale(1.8);
-}
+.cursor-ring.hovered { transform: translate(-50%, -50%) scale(1.8); }
 
 /* Reveal animation */
 .reveal {
@@ -107,9 +108,7 @@ body::after {
 .animate-fade-up-5 { animation: fadeUp 0.8s 1.0s both; }
 .animate-fade-up-6 { animation: fadeUp 0.8s 1.2s both; }
 
-.scroll-line {
-  animation: scrollLine 2s infinite;
-}
+.scroll-line { animation: scrollLine 2s infinite; }
 
 /* Clip path button */
 .btn-clip {
